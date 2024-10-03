@@ -1,0 +1,15 @@
+bitsandbytes
+accelerate
+appdirs
+loralib
+datasets
+fire
+peft
+transformers
+sentencepiece
+wandb
+scipy
+numpy
+sentence_transformers
+scikit-learn
+pandas
