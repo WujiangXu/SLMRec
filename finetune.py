@@ -143,9 +143,9 @@ def train(
         model.is_parallelizable = True
         model.model_parallel = True
     #args.include_inputs_for_metrics --> true
-    datasetTrain = LLMDataset(item_size=999, max_seq_length=30,data_type='train',csv_path="/input/wujiang/dataset/sequential/{}.csv".format(domain_type))
-    datasetVal = LLMDataset(item_size=999, max_seq_length=30,data_type='valid',csv_path="/input/wujiang/dataset/sequential/{}.csv".format(domain_type))
-    datasetTest = LLMDataset(item_size=999, max_seq_length=30,data_type='test',csv_path="/input/wujiang/dataset/sequential/{}.csv".format(domain_type))
+    datasetTrain = LLMDataset(item_size=999, max_seq_length=30,data_type='train',csv_path="./dataset/sequential/{}.csv".format(domain_type))
+    datasetVal = LLMDataset(item_size=999, max_seq_length=30,data_type='valid',csv_path="./dataset/sequential/{}.csv".format(domain_type))
+    datasetTest = LLMDataset(item_size=999, max_seq_length=30,data_type='test',csv_path="./dataset/sequential/{}.csv".format(domain_type))
     data_collator = SequentialCollator()
     if save_steps<0:
         save_strategy = "epoch"
